@@ -1,6 +1,9 @@
 package fr.clement.luc;
 
-public abstract class Individual {
+public abstract class Individual implements Comparable<Individual> {
+	/**
+	 * Higher the value, better the individual.
+	 */
 	private int value;
 	
 	abstract void applyMutation();

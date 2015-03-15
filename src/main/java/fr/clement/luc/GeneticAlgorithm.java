@@ -1,6 +1,7 @@
 package fr.clement.luc;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -82,6 +83,7 @@ public class GeneticAlgorithm<T extends Individual> {
 		} catch (IllegalAccessException e) {
 			LOGGER.error("Error while initializing individuals - IllegalAccessException : " + e.getMessage());
 		}
+		Collections.sort(individuals);
 		return new Population<T>(individuals);
 
 	}

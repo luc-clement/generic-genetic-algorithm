@@ -13,8 +13,13 @@ public class Chemin extends Individual {
 		
 	}
 
+	public int compareTo(Individual o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 	@Override
-	Individual combination(Individual individual) {
+	<T extends Individual> T combination(Individual individual) {
 		// TODO Auto-generated method stub
 		return null;
 	}
