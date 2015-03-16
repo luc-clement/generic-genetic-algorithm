@@ -1,10 +1,16 @@
 package fr.clement.luc;
 
-public class Chemin extends Individual {
+public class Chemin extends Individual<Chromosome> {
+
+	public int compareTo(Individual<Chromosome> o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 	@Override
 	void applyMutation() {
 		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
@@ -13,15 +19,12 @@ public class Chemin extends Individual {
 		
 	}
 
-	public int compareTo(Individual o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 	@Override
-	<T extends Individual> T combination(T individual) {
+	<T extends Individual<?>> T combination(T individual) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
 	
 }

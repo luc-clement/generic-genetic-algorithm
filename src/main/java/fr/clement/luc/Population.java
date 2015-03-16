@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class Population<T extends Individual> {
+public class Population<T extends Individual<?>> {
 	private List<T> individuals = new ArrayList<T>();
 	private Random random = new Random();
 	
@@ -79,7 +79,7 @@ public class Population<T extends Individual> {
 		this.individuals = individuals;
 	}
 	
-	public class Couple<T2 extends Individual> {
+	public class Couple<T2 extends Individual<?>> {
 		private T2 parentA;
 		private T2 parentB;
 		

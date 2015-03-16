@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
  *
  * @param <T>
  */
-public class GeneticAlgorithm<T extends Individual> {
+public class GeneticAlgorithm<T extends Individual<?>> {
 
 	private final static Logger LOGGER = Logger.getLogger(GeneticAlgorithm.class);
 
