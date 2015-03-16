@@ -19,7 +19,7 @@ public class Chemin extends Individual {
 	}
 
 	@Override
-	<T extends Individual> T combination(Individual individual) {
+	<T extends Individual> T combination(T individual) {
 		// TODO Auto-generated method stub
 		return null;
 	}

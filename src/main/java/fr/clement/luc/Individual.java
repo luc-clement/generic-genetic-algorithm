@@ -8,7 +8,7 @@ public abstract class Individual implements Comparable<Individual> {
 	
 	abstract void applyMutation();
 	abstract void doOptimisation();
-	abstract <T extends Individual> T combination(Individual individual);
+	abstract <T extends Individual> T combination(T individual);
 	
 	
 	public Individual() {

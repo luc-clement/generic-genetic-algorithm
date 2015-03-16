@@ -7,6 +7,7 @@ import java.util.Random;
 
 public class Population<T extends Individual> {
 	private List<T> individuals = new ArrayList<T>();
+	private Random random = new Random();
 	
 	public int getBestScore() {
 		int result = 0;
@@ -31,19 +32,18 @@ public class Population<T extends Individual> {
 	}
 	
 	public Couple<T> getCouple() {
-		// TODO
-		return null;
+		T parentA = getIndividualBetweenPositions(0, 4);
+		T parentB = getIndividualBetweenPositions(5, individuals.size()-1);
+		return new Couple<T>(parentA, parentB);
 	}
 	
-	public T getIndividualbetweenPositions(int min, int max) {
+	public T getIndividualBetweenPositions(int min, int max) {
 		if (individuals.isEmpty()) {
 			return null;
 		} else if (min < 0 || max > individuals.size()-1) {
 			return individuals.get(0);
 		}
 		
-		Random random = new Random();
-		random.setSeed(java.util.Calendar.getInstance().getTimeInMillis());
 		int position = (random.nextInt() % (max - min)) + min;
 		return individuals.get(position);
 	}
@@ -63,10 +63,12 @@ public class Population<T extends Individual> {
 	public Population(List<T> individuals) {
 		super();
 		this.individuals = individuals;
+		random.setSeed(java.util.Calendar.getInstance().getTimeInMillis());
 	}
 	
 	public Population() {
 		super();
+		random.setSeed(java.util.Calendar.getInstance().getTimeInMillis());
 	}
 
 	public List<T> getIndividuals() {
